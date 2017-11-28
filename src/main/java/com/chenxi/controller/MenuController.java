@@ -24,4 +24,14 @@ public class MenuController {
         return null;
     }
 
+    @RequestMapping("/index")
+    public String toIndexJsp(){
+        return "background/index";
+    }
+
+    @RequestMapping("/login")
+    public String toLoginJsp(){
+        return "background/login";
+    }
+
 }
