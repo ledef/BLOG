@@ -22,6 +22,6 @@
     </script>
 </head>
 <body>
-    hello,你好，欢迎登录成功！
+    <span>${user.account}</span></span>你好，欢迎登录成功！
 </body>
 </html>

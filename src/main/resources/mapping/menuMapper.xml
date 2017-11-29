@@ -2,15 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chenxi.dao.MenuDao">
     <resultMap id="menu" type="com.chenxi.empty.Menu">
-        <id property="mId" column="id"></id>
-        <!--<result property="mId" column="id"></result>-->
-        <result property="mName" column="mName"></result>
-        <result property="mUrl" column="mUrl"></result>
-        <result property="mCreateTime" column="mLevel"></result>
-        <result property="mCreateName" column="mCreateName"></result>
-        <result property="mParentId" column="mParentId"></result>
-        <result property="mLevel" column="id"></result>
-        <collection property="mChilds" ofType="menu" column="id" select="findChilds"></collection>
+        <id property="id" column="id"></id>
+        <result property="name" column="mName"></result>
+        <result property="url" column="mUrl"></result>
+        <result property="createTime" column="mLevel"></result>
+        <result property="createName" column="mCreateName"></result>
+        <result property="parentId" column="mParentId"></result>
+        <result property="level" column="id"></result>
+        <collection property="childs" ofType="menu" column="id" select="findChilds"></collection>
     </resultMap>
     <select id="findAll" resultMap="menu">
         SELECT * FROM menu_t WHERE mParentId=0 ORDER BY id ASC

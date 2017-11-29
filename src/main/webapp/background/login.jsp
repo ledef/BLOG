@@ -34,7 +34,7 @@
         <div class="loginContent">
             <div class="input-group col-xs-2" style="margin: 0 auto">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                <input class="form-control" type="text" placeholder="请输入用户名" name="userName" required/>
+                <input class="form-control" type="text" placeholder="请输入用户名" name="account" required/>
             </div>
             <br/>
             <div class="input-group col-xs-2" style="margin: 0 auto">

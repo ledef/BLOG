@@ -1,4 +1,11 @@
 package com.chenxi.dao;
 
-public class UserDao {
+import com.chenxi.empty.User;
+
+/**
+ * @author chenxi
+ * 用户接口
+ */
+public interface UserDao extends BaseDao<User>{
+    User login(String account,String password);
 }

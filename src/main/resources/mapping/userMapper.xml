@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chenxi.dao.UserDao">
-
+    <resultMap id="user" type="com.chenxi.empty.User">
+        <id property="id" column="id"></id>
+        <result property="account" column="uAccount"></result>
+        <result property="password" column="uPassword"></result>
+        <result property="imAccount" column="uImAccount"></result>
+        <result property="imPassword" column="uImPassword"></result>
+    </resultMap>
+    <select id="login" resultMap="user">
+        SELECT * FROM user_t WHERE uAccount=#{0} AND uPassword=#{1}
+    </select>
 </mapper>

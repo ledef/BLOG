@@ -60,7 +60,7 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>/background/login.jsp</welcome-file>
+        <welcome-file>/bgIndex/login</welcome-file>
     </welcome-file-list>
 
     <!-- session配置 -->
