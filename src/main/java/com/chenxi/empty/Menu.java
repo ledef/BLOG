@@ -1,6 +1,7 @@
 package com.chenxi.empty;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author chenxi
@@ -9,13 +10,15 @@ import java.util.List;
 public class Menu {
 
     private int id;//数据库Id
-    private String name;//菜单名称
-    private String url;//菜单跳转url
+    private String text;//菜单名称
+    private String href;//菜单跳转url
     private String createTime;//创建时间
     private String createName;//创建者
     private String level;//菜单等级
     private String parentId;//父菜单id
-    private List<Menu> childs;//子菜单
+    private String icon;//图标
+    private String state;//菜单状态
+    private List<Menu> nodes;//子菜单
 
     public int getId() {
         return id;
@@ -25,20 +28,20 @@ public class Menu {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getText() {
+        return text;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public String getUrl() {
-        return url;
+    public String getHref() {
+        return href;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setHref(String href) {
+        this.href = href;
     }
 
     public String getCreateTime() {
@@ -73,11 +76,27 @@ public class Menu {
         this.parentId = parentId;
     }
 
-    public List<Menu> getChilds() {
-        return childs;
+    public String getIcon() {
+        return icon;
     }
 
-    public void setChilds(List<Menu> childs) {
-        this.childs = childs;
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public List<Menu> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Menu> nodes) {
+        this.nodes = nodes;
     }
 }

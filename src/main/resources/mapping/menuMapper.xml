@@ -3,18 +3,31 @@
 <mapper namespace="com.chenxi.dao.MenuDao">
     <resultMap id="menu" type="com.chenxi.empty.Menu">
         <id property="id" column="id"></id>
-        <result property="name" column="mName"></result>
-        <result property="url" column="mUrl"></result>
-        <result property="createTime" column="mLevel"></result>
+        <result property="text" column="mName"></result>
+        <result property="href" column="mUrl"></result>
+        <result property="createTime" column="mCreateTime"></result>
         <result property="createName" column="mCreateName"></result>
         <result property="parentId" column="mParentId"></result>
-        <result property="level" column="id"></result>
-        <collection property="childs" ofType="menu" column="id" select="findChilds"></collection>
+        <result property="icon" column="mIcon"></result>
+        <result property="level" column="mLevel"></result>
+        <result property="state" column="mState"></result>
+        <collection property="nodes" ofType="menu" column="id" select="findChilds"></collection>
+    </resultMap>
+    <resultMap id="menuChild" type="com.chenxi.empty.Menu">
+        <id property="id" column="id"></id>
+        <result property="text" column="mName"></result>
+        <result property="href" column="mUrl"></result>
+        <result property="createTime" column="mCreateTime"></result>
+        <result property="createName" column="mCreateName"></result>
+        <result property="parentId" column="mParentId"></result>
+        <result property="icon" column="mIcon"></result>
+        <result property="level" column="mLevel"></result>
+        <result property="state" column="mState"></result>
     </resultMap>
     <select id="findAll" resultMap="menu">
         SELECT * FROM menu_t WHERE mParentId=0 ORDER BY id ASC
     </select>
-    <select id="findChilds" resultType="com.chenxi.empty.Menu">
+    <select id="findChilds" resultMap="menuChild">
         SELECT * FROM menu_t WHERE mParentId=#{id} ORDER BY id ASC
     </select>
 </mapper>

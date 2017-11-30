@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -22,19 +23,22 @@ import java.util.List;
 public class MenuController {
     @Autowired
     private MenuService menuService;
-    @Autowired
-    private UserService mUserService;
 
-    @RequestMapping("/menu")
+    @ResponseBody
+    @RequestMapping(value = "/menu",method = RequestMethod.POST)
     public List<Menu> bgMenu(){
         List<Menu> menus=menuService.findAll();
-        System.out.println("ssssss");
-        return null;
+        System.out.println("ss");
+        return menus;
     }
+
+    @Autowired
+    private UserService mUserService;
 
     @RequestMapping(value = "/index",method = RequestMethod.POST)
     public String toIndexJsp(@RequestParam String account, @RequestParam String password, Model model){
         User user=mUserService.login(account,password);
+        System.out.println("sssss");
         if(user!=null){
             model.addAttribute("user",user);
             return "background/index";
