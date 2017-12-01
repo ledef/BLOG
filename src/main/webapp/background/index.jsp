@@ -67,8 +67,8 @@
             <div class="indexRightDiv"></div>
         </div>
         <div class="indexBottomDiv">
-            <label class="indexBottomText">版权所有     翻版必究</label>
-            <label class="indexBottomText">CopyRight © 辰曦工作小组所有</label>
+            <label class="indexBottomText">版权所有&nbsp;&nbsp;&nbsp;&nbsp;翻版必究</label>
+            <label class="indexBottomText">CopyRight © 辰曦工作室所有</label>
         </div>
     </div>
 </body>
