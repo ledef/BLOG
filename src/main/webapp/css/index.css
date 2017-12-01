@@ -1,20 +1,18 @@
 /*body第一个div css*/
 .indexBd {
     width: 80%;
-    margin: 0 auto;
-    background-color: #9acfea;
+    margin: 0px auto;
 }
 
 /*body top div css*/
 .indexTopDiv {
-    height: 100px;
-    background-color: #3e8f3e;
+    height: 120px;
 }
 
 /*body Left div css*/
 .indexLeftDiv {
     width: 20%;
-    min-height: 600px;
+    min-height: 560px;
 }
 
 /*body right div css*/
@@ -27,5 +25,42 @@
 /*body Bottom div css*/
 .indexBottomDiv {
     height: 100px;
-    background-color: #985f0d;
+}
+
+/*body Bottom 文字 css*/
+.indexBottomText {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+/*top图片 css*/
+.indexImg{
+    width: 80%;
+    height:120px;
+    float: left;
+    max-height:100%;
+}
+/*top用户 css*/
+.indexUser{
+    width: 20%;
+    height:120px;
+    float: left;
+    background-color: #9acfea;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+/*用户头像 css*/
+.indexHeadImg{
+    border-radius: 50%;
+    max-width:80px;
+    max-height:80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/*用户头像 css*/
+.indexUserName{
+    margin-top: 5px;
+    font-size: small;
 }

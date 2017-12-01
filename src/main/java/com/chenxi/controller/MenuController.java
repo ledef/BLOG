@@ -28,7 +28,6 @@ public class MenuController {
     @RequestMapping(value = "/menu",method = RequestMethod.POST)
     public List<Menu> bgMenu(){
         List<Menu> menus=menuService.findAll();
-        System.out.println("ss");
         return menus;
     }
 
@@ -38,7 +37,6 @@ public class MenuController {
     @RequestMapping(value = "/index",method = RequestMethod.POST)
     public String toIndexJsp(@RequestParam String account, @RequestParam String password, Model model){
         User user=mUserService.login(account,password);
-        System.out.println("sssss");
         if(user!=null){
             model.addAttribute("user",user);
             return "background/index";

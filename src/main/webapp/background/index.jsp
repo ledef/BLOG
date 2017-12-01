@@ -52,13 +52,24 @@
 </head>
 <body>
     <div class="indexBd">
-        <div class="indexTopDiv"></div>
+        <div class="indexTopDiv">
+            <div class="indexUser">
+                <img class="indexHeadImg" src="../images/user.png"/><br/>
+                <span class="label label-success indexUserName">${user.account}&nbsp;&nbsp;,欢迎你！</span>
+            </div>
+            <div>
+                <img class="indexImg" src="../images/login_title.png"/>
+            </div>
+        </div>
         <div>
             <div id="tree" class="indexLeftDiv">
             </div>
             <div class="indexRightDiv"></div>
         </div>
-        <div class="indexBottomDiv"></div>
+        <div class="indexBottomDiv">
+            <label class="indexBottomText">版权所有     翻版必究</label>
+            <label class="indexBottomText">CopyRight © 辰曦工作小组所有</label>
+        </div>
     </div>
 </body>
 </html>
