@@ -28,20 +28,19 @@
                     $('#tree').treeview({
                         data:result,//数据源
                         highlightSelected: true,    //是否高亮选中
-                        //nodeIcon: 'glyphicon glyphicon-user',    //节点上的图标
-                        //nodeIcon: 'glyphicon glyphicon-globe',
                         emptyIcon: '',    //没有子节点的节点图标
                         multiSelect: false,    //多选
-//                        onNodeChecked: function (event,data) {
-//                            alert(data.nodeId);
-//                        },
-//                        onNodeSelected: function (event, data) {
-//                            alert(data.nodeId);
-//                        }
+                        enableLinks:true,
+                        onNodeSelected: function (event, data) {
+//                            document.getElementById("iframepage").src="/blog/background"+data.href;
+                            alert('您选择了：'+data.href);
+                        },
+                        expandIcon:'glyphicon glyphicon-tree-deciduous',
                         state: {
                             expanded: false,
                         },
                     });
+//                    $('#tree').treeview('selectNode',[1,{silent:true}]);//默认加载用户数据
                 },
                 error: function () {
                     alert("树形结构加载失败！")
@@ -64,7 +63,9 @@
         <div>
             <div id="tree" class="indexLeftDiv">
             </div>
-            <div class="indexRightDiv"></div>
+            <div class="indexRightDiv">
+                <%--<iframe name='main' id="iframepage" frameborder="0" height="800px" width="100%" scrolling="no" marginheight="0" marginwidth="0"></iframe>--%>
+            </div>
         </div>
         <div class="indexBottomDiv">
             <label class="indexBottomText">版权所有&nbsp;&nbsp;&nbsp;&nbsp;翻版必究</label>
